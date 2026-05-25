@@ -1,0 +1,101 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="500" fill="#f8fafc"/>
+
+  <!-- ── Central health cycle (replaces human figure) ── -->
+
+  <!-- Background ring (full 360° base) -->
+  <circle cx="300" cy="240" r="95" stroke="#f1f5f9" stroke-width="10" fill="none"/>
+
+  <!-- Colored arc segments (clockwise cycle connecting each card) -->
+  <!-- Sleep → Steps (top, purple) -->
+  <path d="M 223 184 A 95 95 0 0 1 377 184" stroke="#818cf8" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- Steps → Nutrition (right, green) -->
+  <path d="M 377 184 A 95 95 0 0 1 395 247" stroke="#1D9E75" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- Nutrition → Wearable (bottom-right, pink) -->
+  <path d="M 395 247 A 95 95 0 0 1 300 335" stroke="#ec4899" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- Wearable → Mood (bottom-left, amber) -->
+  <path d="M 300 335 A 95 95 0 0 1 205 247" stroke="#f59e0b" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- Mood → Sleep (left, purple) -->
+  <path d="M 205 247 A 95 95 0 0 1 223 184" stroke="#818cf8" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+  <!-- Node dots at each card connection point -->
+  <circle cx="223" cy="184" r="9" fill="#818cf8" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="377" cy="184" r="9" fill="#1D9E75" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="395" cy="247" r="9" fill="#ec4899" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="300" cy="335" r="9" fill="#1D9E75" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="205" cy="247" r="9" fill="#f59e0b" stroke="#ffffff" stroke-width="2.5"/>
+
+  <!-- Inner hub -->
+  <circle cx="300" cy="240" r="72" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- ECG / heartbeat line -->
+  <path d="M 248 240 L 262 240 L 270 222 L 280 258 L 290 218 L 300 252 L 310 240 L 352 240"
+        stroke="#1D9E75" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Cycle label -->
+  <text x="300" y="268" font-size="9" font-family="Arial,sans-serif" fill="#64748b" text-anchor="middle" font-weight="600">Health Cycle</text>
+
+  <!-- ── Connector lines (card edges → ring dots) ── -->
+
+  <!-- Sleep card → ring -->
+  <line x1="170" y1="95" x2="223" y2="184" stroke="#1D9E75" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+  <!-- Steps card → ring -->
+  <line x1="430" y1="95" x2="377" y2="184" stroke="#1D9E75" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+  <!-- Mood card → ring -->
+  <line x1="160" y1="255" x2="205" y2="247" stroke="#1D9E75" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+  <!-- Nutrition card → ring -->
+  <line x1="440" y1="255" x2="395" y2="247" stroke="#1D9E75" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+  <!-- Wearable card → ring -->
+  <line x1="300" y1="400" x2="300" y2="335" stroke="#1D9E75" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+
+  <!-- ── Floating activity cards ── -->
+
+  <!-- SLEEP card (top left) -->
+  <rect x="30" y="50" width="140" height="90" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <path d="M 66 82 Q 72 70 84 72 Q 74 82 76 94 Q 64 92 66 82 Z" fill="#818cf8"/>
+  <text x="94" y="78" font-size="10" font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">Sleep</text>
+  <text x="60" y="100" font-size="22" font-family="Arial,sans-serif" fill="#818cf8" font-weight="bold">7.2</text>
+  <text x="110" y="100" font-size="10" font-family="Arial,sans-serif" fill="#6b7280">hrs</text>
+  <text x="60" y="116" font-size="8" font-family="Arial,sans-serif" fill="#4ade80">Good quality night</text>
+
+  <!-- STEPS card (top right) -->
+  <rect x="430" y="50" width="140" height="90" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <ellipse cx="466" cy="78" rx="7" ry="9" fill="#1D9E75" transform="rotate(-15 466 78)"/>
+  <ellipse cx="480" cy="85" rx="7" ry="9" fill="#1D9E75" opacity="0.6" transform="rotate(10 480 85)"/>
+  <text x="494" y="78" font-size="10" font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">Steps</text>
+  <text x="450" y="104" font-size="22" font-family="Arial,sans-serif" fill="#1D9E75" font-weight="bold">6,842</text>
+  <rect x="450" y="112" width="106" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="450" y="112" width="90" height="6" rx="3" fill="#1D9E75"/>
+  <text x="450" y="126" font-size="7" font-family="Arial,sans-serif" fill="#6b7280">85% of daily goal</text>
+
+  <!-- MOOD card (left middle) -->
+  <rect x="20" y="210" width="140" height="90" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <circle cx="58" cy="248" r="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <circle cx="53" cy="245" r="2.5" fill="#d97706"/>
+  <circle cx="63" cy="245" r="2.5" fill="#d97706"/>
+  <path d="M 51 253 Q 58 259 65 253" stroke="#d97706" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="82" y="244" font-size="10" font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">Mood</text>
+  <text x="82" y="258" font-size="20" font-family="Arial,sans-serif" fill="#f59e0b" font-weight="bold">7</text>
+  <text x="102" y="258" font-size="10" font-family="Arial,sans-serif" fill="#6b7280">/10</text>
+  <text x="34" y="284" font-size="8" font-family="Arial,sans-serif" fill="#6b7280">Logged with symptoms</text>
+
+  <!-- NUTRITION card (right middle) -->
+  <rect x="440" y="210" width="140" height="90" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <circle cx="476" cy="248" r="16" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5" opacity="0.7"/>
+  <text x="469" y="253" font-size="14" font-family="Arial,sans-serif" fill="#db2777">&#x1F37D;</text>
+  <text x="500" y="244" font-size="10" font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">Nutrition</text>
+  <text x="496" y="258" font-size="16" font-family="Arial,sans-serif" fill="#ec4899" font-weight="bold">1,640</text>
+  <text x="496" y="268" font-size="8" font-family="Arial,sans-serif" fill="#6b7280">kcal today</text>
+  <rect x="456" y="278" width="106" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="456" y="278" width="86" height="6" rx="3" fill="#ec4899" opacity="0.7"/>
+
+  <!-- WEARABLE card (bottom center) -->
+  <rect x="170" y="400" width="260" height="60" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <circle cx="208" cy="430" r="16" fill="#ecfdf5" stroke="#1D9E75" stroke-width="1.5"/>
+  <text x="208" y="435" font-size="12" font-family="Arial,sans-serif" fill="#1D9E75" text-anchor="middle">&#x231A;</text>
+  <text x="234" y="424" font-size="9" font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">Wearable synced</text>
+  <text x="234" y="436" font-size="8" font-family="Arial,sans-serif" fill="#4b5563">Heart rate · Steps · Sleep</text>
+  <text x="234" y="448" font-size="7" font-family="Arial,sans-serif" fill="#6b7280">All feeding into your GP report</text>
+  <circle cx="416" cy="424" r="5" fill="#4ade80"/>
+  <text x="416" y="438" font-size="6" font-family="Arial,sans-serif" fill="#6b7280" text-anchor="middle">Live</text>
+</svg>

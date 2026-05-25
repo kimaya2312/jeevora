@@ -1,0 +1,50 @@
+---
+title: "Product"
+layout: "product"
+description: "Explore what Jeevora offers — features, platform, and early access."
+draft: false
+
+features:
+  title: "Features"
+  items:
+    - icon: "🩺"
+      name: "Symptom Tracking"
+      description: "Log symptoms with timeline, severity, frequency, and duration so nothing gets forgotten before your appointment."
+    - icon: "📋"
+      name: "GP-Ready Reports"
+      description: "Automatically turns your logs into a clear, structured, non-diagnostic summary ready to share with your doctor."
+    - icon: "💊"
+      name: "Medication Notes"
+      description: "Track medications, dosages, side effects, and changes over time — all in one place."
+    - icon: "😴"
+      name: "Sleep & Mood Tracking"
+      description: "Log daily sleep patterns and mood shifts to build a fuller picture of your wellbeing."
+    - icon: "🥗"
+      name: "Nutrition & Lifestyle"
+      description: "Record meals, exercise routines, and habits to connect lifestyle with health outcomes."
+    - icon: "❓"
+      name: "Appointment Prep"
+      description: "Note questions and concerns you want to raise so you never forget what matters most in a 10-minute appointment."
+
+platform:
+  title: "Platform"
+  items:
+    - icon: "🔒"
+      name: "Privacy First"
+      description: "Built on a privacy-first architecture. Your health data is stored in encrypted cloud storage — not on a blockchain. A separate immutable permission ledger records every consent decision only, giving you verifiable proof of exactly what was authorised, when, and by whom."
+    - icon: "⌚"
+      name: "Wearable Integration"
+      description: "Designed to connect with major wearable devices — Apple Watch, Fitbit, Garmin and more — where technical access is available."
+    - icon: "📱"
+      name: "Mobile App"
+      description: "A clean, intuitive mobile experience built for everyday health logging — quick to open, quick to log, no friction."
+    - icon: "☁️"
+      name: "Secure Cloud Storage"
+      description: "Health data is encrypted and securely stored, giving you access across devices while keeping your information protected."
+    - icon: "🔗"
+      name: "Data You Control"
+      description: "Export your data, delete your account, or adjust your consent permissions at any time. Every permission you grant or revoke is logged immutably — so control isn't just a setting, it's a verifiable record."
+    - icon: "🛡️"
+      name: "Cybersecurity by Design"
+      description: "Security is not an afterthought. The platform is built with cybersecurity principles at every layer."
+---

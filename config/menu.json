@@ -1,0 +1,45 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Product",
+      "url": "/product"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Home",
+      "menu": [
+        { "text": "Features",       "url": "/#features" },
+        { "text": "How It Works",   "url": "/#how-it-works" },
+        { "text": "GP-Ready Reports","url": "/#gp-ready" },
+        { "text": "Privacy First",  "url": "/#privacy" },
+        { "text": "Join Waitlist",  "url": "/contact" }
+      ]
+    },
+    {
+      "name": "About",
+      "menu": [
+        { "text": "About Jeevora",     "url": "/about" },
+        { "text": "What It Does",      "url": "/about#what-it-does" },
+        { "text": "About the Founder", "url": "/about#founder" }
+      ]
+    },
+    {
+      "name": "Product",
+      "menu": [
+        { "text": "Features",     "url": "/product#features" },
+        { "text": "Platform",     "url": "/product#platform" },
+        { "text": "Free Demo",    "url": "/product#demo" },
+        { "text": "Join Waitlist","url": "/contact" }
+      ]
+    }
+  ]
+}

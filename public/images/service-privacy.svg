@@ -1,0 +1,110 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="500" fill="#f8fafc"/>
+
+  <!-- Shield: outer glow layers (centred x=300) -->
+  <path d="M300 68 L412 114 L412 252 C412 328 362 382 300 402
+           C238 382 188 328 188 252 L188 114 Z" fill="#ecfdf5"/>
+  <path d="M300 84 L398 126 L398 251 C398 319 354 368 300 386
+           C246 368 202 319 202 251 L202 126 Z" fill="#d1fae5"/>
+
+  <!-- Shield: green fill — left edge x=220, right x=380, top y=105, bottom ≈362 -->
+  <path d="M300 105 L380 142 L380 252 C380 308 342 347 300 362
+           C258 347 220 308 220 252 L220 142 Z" fill="#1D9E75"/>
+
+  <!-- Lock: shackle (centred at x=300, arc top y=168) -->
+  <path d="M280 210 L280 190 C280 168 320 168 320 190 L320 210"
+        stroke="#ffffff" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+  <!-- Lock: body (centred at x=300, y=210–254) -->
+  <rect x="272" y="210" width="56" height="44" rx="10" fill="#ffffff"/>
+  <!-- Lock: keyhole -->
+  <circle cx="300" cy="228" r="7.5" fill="#1D9E75"/>
+  <rect x="297" y="229" width="6" height="13" rx="3" fill="#1D9E75"/>
+
+  <!-- Shield label (below lock, centred) -->
+  <text x="300" y="274" font-size="11" font-family="Arial,sans-serif"
+        fill="#ffffff" text-anchor="middle" font-weight="bold">Your health data.</text>
+  <text x="300" y="290" font-size="10" font-family="Arial,sans-serif"
+        fill="#d1fae5" text-anchor="middle">Protected. Private.</text>
+  <text x="300" y="305" font-size="10" font-family="Arial,sans-serif"
+        fill="#d1fae5" text-anchor="middle">Yours.</text>
+
+  <!-- ── Connector lines — each endpoint sits on the inner shield boundary ── -->
+  <!-- Top-left  → shield top-left corner (220,142) -->
+  <line x1="170" y1="65"  x2="220" y2="142"
+        stroke="#1D9E75" stroke-width="1" stroke-dasharray="4,3" opacity="0.45"/>
+  <!-- Top-right → shield top-right corner (380,142) -->
+  <line x1="430" y1="65"  x2="380" y2="142"
+        stroke="#1D9E75" stroke-width="1" stroke-dasharray="4,3" opacity="0.45"/>
+  <!-- Middle-left  → left straight edge at card height (220,244) -->
+  <line x1="170" y1="244" x2="220" y2="244"
+        stroke="#1D9E75" stroke-width="1" stroke-dasharray="4,3" opacity="0.45"/>
+  <!-- Middle-right → right straight edge at card height (380,244) -->
+  <line x1="430" y1="244" x2="380" y2="244"
+        stroke="#1D9E75" stroke-width="1" stroke-dasharray="4,3" opacity="0.45"/>
+  <!-- Bottom-left  → bottom-left curve ≈(242,340) -->
+  <line x1="170" y1="415" x2="242" y2="340"
+        stroke="#1D9E75" stroke-width="1" stroke-dasharray="4,3" opacity="0.45"/>
+  <!-- Bottom-right → bottom-right curve ≈(358,340) -->
+  <line x1="430" y1="415" x2="358" y2="340"
+        stroke="#1D9E75" stroke-width="1" stroke-dasharray="4,3" opacity="0.45"/>
+
+  <!-- ── Cards ── -->
+
+  <!-- TOP LEFT: Never sold (y=36, h=58, centre y=65) -->
+  <rect x="8"   y="36"  width="162" height="58" rx="12"
+        fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <circle cx="36" cy="65" r="13" fill="#ecfdf5" stroke="#1D9E75" stroke-width="1.5"/>
+  <text x="36" y="70" font-size="11" font-family="Arial,sans-serif"
+        fill="#1D9E75" text-anchor="middle" font-weight="bold">&#x2713;</text>
+  <text x="58" y="58" font-size="9"   font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">Never sold</text>
+  <text x="58" y="72" font-size="7.5" font-family="Arial,sans-serif" fill="#4b5563">Your data is yours</text>
+
+  <!-- TOP RIGHT: NHS-independent -->
+  <rect x="430" y="36"  width="162" height="58" rx="12"
+        fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <circle cx="458" cy="65" r="13" fill="#ecfdf5" stroke="#1D9E75" stroke-width="1.5"/>
+  <text x="458" y="70" font-size="11" font-family="Arial,sans-serif"
+        fill="#1D9E75" text-anchor="middle" font-weight="bold">&#x2713;</text>
+  <text x="480" y="58" font-size="9"   font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">NHS-independent</text>
+  <text x="480" y="72" font-size="7.5" font-family="Arial,sans-serif" fill="#4b5563">No NHS system access</text>
+
+  <!-- MIDDLE LEFT: Explicit consent (y=210, h=68, centre y=244) -->
+  <rect x="8"   y="210" width="162" height="68" rx="12"
+        fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <circle cx="36" cy="244" r="13" fill="#ecfdf5" stroke="#1D9E75" stroke-width="1.5"/>
+  <text x="36" y="249" font-size="11" font-family="Arial,sans-serif"
+        fill="#1D9E75" text-anchor="middle" font-weight="bold">&#x2713;</text>
+  <text x="58" y="233" font-size="9"   font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">Explicit consent</text>
+  <text x="58" y="248" font-size="7.5" font-family="Arial,sans-serif" fill="#4b5563">You choose what</text>
+  <text x="58" y="261" font-size="7.5" font-family="Arial,sans-serif" fill="#4b5563">to share</text>
+
+  <!-- MIDDLE RIGHT: Non-diagnostic -->
+  <rect x="430" y="210" width="162" height="68" rx="12"
+        fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <circle cx="458" cy="244" r="13" fill="#ecfdf5" stroke="#1D9E75" stroke-width="1.5"/>
+  <text x="458" y="249" font-size="11" font-family="Arial,sans-serif"
+        fill="#1D9E75" text-anchor="middle" font-weight="bold">&#x2713;</text>
+  <text x="480" y="233" font-size="9"   font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">Non-diagnostic</text>
+  <text x="480" y="248" font-size="7.5" font-family="Arial,sans-serif" fill="#4b5563">No medical</text>
+  <text x="480" y="261" font-size="7.5" font-family="Arial,sans-serif" fill="#4b5563">conclusions</text>
+
+  <!-- BOTTOM LEFT: Delete anytime (y=390, h=68, centre y=424) -->
+  <rect x="8"   y="390" width="162" height="68" rx="12"
+        fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <circle cx="36" cy="424" r="13" fill="#ecfdf5" stroke="#1D9E75" stroke-width="1.5"/>
+  <text x="36" y="429" font-size="11" font-family="Arial,sans-serif"
+        fill="#1D9E75" text-anchor="middle" font-weight="bold">&#x2713;</text>
+  <text x="58" y="413" font-size="9"   font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">Delete anytime</text>
+  <text x="58" y="428" font-size="7.5" font-family="Arial,sans-serif" fill="#4b5563">Full data erasure</text>
+  <text x="58" y="441" font-size="7.5" font-family="Arial,sans-serif" fill="#4b5563">on request</text>
+
+  <!-- BOTTOM RIGHT: Cybersecurity built-in -->
+  <rect x="430" y="390" width="162" height="68" rx="12"
+        fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <circle cx="458" cy="424" r="13" fill="#ecfdf5" stroke="#1D9E75" stroke-width="1.5"/>
+  <text x="458" y="429" font-size="11" font-family="Arial,sans-serif"
+        fill="#1D9E75" text-anchor="middle" font-weight="bold">&#x2713;</text>
+  <text x="480" y="413" font-size="9"   font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">Cybersecurity</text>
+  <text x="480" y="427" font-size="9"   font-family="Arial,sans-serif" fill="#0f172a" font-weight="bold">built-in</text>
+  <text x="480" y="442" font-size="7.5" font-family="Arial,sans-serif" fill="#4b5563">Privacy-first, always</text>
+</svg>

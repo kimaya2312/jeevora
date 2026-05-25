@@ -1,0 +1,32 @@
+{
+  "site": {
+    "title": "Jeevora",
+    "base_url": "/",
+    "favicon": "/images/logo-icon2.png",
+    "logo": "/images/logo-icon2.png",
+    "logo_width": "48",
+    "logo_height": "32",
+    "logo_text": "Jeevora"
+  },
+  "settings": {
+    "pagination": 4,
+    "summary_length": 200,
+    "blog_folder": "blogs"
+  },
+  "nav_button": {
+    "enable": true,
+    "label": "Join Waitlist",
+    "link": "/contact"
+  },
+  "params": {
+    "contact_form_action": "",
+    "tag_manager_id": "",
+    "footer_content": "Jeevora is a privacy-first UK health app that helps patients track symptoms and prepare for GP appointments — without interfering with NHS systems.",
+    "copyright": "© 2026 Jeevora. All rights reserved."
+  },
+  "metadata": {
+    "meta_author": "Jeevora",
+    "meta_image": "",
+    "meta_description": "Jeevora is a privacy-first UK health app that helps patients track symptoms, prepare for GP appointments, and build a complete picture of their health."
+  }
+}
