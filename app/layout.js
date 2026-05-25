@@ -3,7 +3,10 @@ import theme from "@config/theme.json";
 import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
+import Script from "next/script";
 import "../styles/style.scss";
+
+const GA_ID = "G-Y5K2DC709T";
 
 export const metadata = {
   title: "Jeevora Care",
@@ -55,6 +58,18 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body suppressHydrationWarning={true}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
         <Header />
         <Providers>{children}</Providers>
         <Footer />
