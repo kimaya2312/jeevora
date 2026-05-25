@@ -18,7 +18,7 @@ export async function POST(request) {
     }
 
     // Duplicate check
-    if (emailExists(email.trim().toLowerCase())) {
+    if (await emailExists(email.trim().toLowerCase())) {
       return NextResponse.json(
         { error: "This email is already on the waitlist!" },
         { status: 409 }
@@ -26,7 +26,7 @@ export async function POST(request) {
     }
 
     // Save
-    addToWaitlist(
+    await addToWaitlist(
       name.trim(),
       email.trim().toLowerCase(),
       message ? message.trim() : null

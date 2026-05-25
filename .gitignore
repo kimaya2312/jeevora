@@ -39,3 +39,8 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# Local database (never commit — contains user data)
+/data/
+*.db
+*.sqlite

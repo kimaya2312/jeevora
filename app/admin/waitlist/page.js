@@ -1,16 +1,9 @@
-import { getDb } from "@lib/db";
+import { getAllEntries } from "@lib/db";
 
 export const dynamic = "force-dynamic"; // always re-fetch on each visit
 
-function getEntries() {
-  const db = getDb();
-  return db
-    .prepare("SELECT id, name, email, message, joined_at FROM waitlist ORDER BY id DESC")
-    .all();
-}
-
-export default function WaitlistAdmin() {
-  const entries = getEntries();
+export default async function WaitlistAdmin() {
+  const entries = await getAllEntries();
 
   return (
     <main style={{ fontFamily: "system-ui, sans-serif", padding: "40px 32px", maxWidth: 1100, margin: "0 auto" }}>
@@ -25,7 +18,7 @@ export default function WaitlistAdmin() {
             : `${entries.length} sign-up${entries.length === 1 ? "" : "s"} · newest first`}
         </p>
         <p style={{ color: "#94a3b8", marginTop: 4, fontSize: 12 }}>
-          Data stored locally at <code style={{ background: "#f1f5f9", padding: "1px 5px", borderRadius: 3 }}>data/jeevora.db</code>
+          Data stored in Turso cloud database.
         </p>
       </div>
 
@@ -95,7 +88,7 @@ export default function WaitlistAdmin() {
 
       {/* Footer note */}
       <p style={{ marginTop: 32, fontSize: 12, color: "#cbd5e1" }}>
-        This page is local-only. Do not deploy it publicly without adding authentication.
+        This page is internal. Do not share the URL publicly without adding authentication.
       </p>
     </main>
   );
