@@ -31,7 +31,8 @@
       "Bash(kill %1)",
       "PowerShell(Copy-Item \"D:\\\\Health App Project\\\\Illustrations\\\\more-tracking.png\" \"D:\\\\Health App Project\\\\Jeevora_Website\\\\public\\\\images\\\\more-tracking.png\")",
       "Bash(Write-Output \"done\")",
-      "Bash(rm -rf \"/mnt/d/Health App Project/Jeevora_Website/.next\" && echo \"done\")"
+      "Bash(rm -rf \"/mnt/d/Health App Project/Jeevora_Website/.next\" && echo \"done\")",
+      "Bash(git add *)"
     ]
   }
 }

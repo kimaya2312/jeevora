@@ -10,7 +10,7 @@ export default async function WaitlistAdmin() {
       {/* Header */}
       <div style={{ marginBottom: 32 }}>
         <h1 style={{ fontSize: 26, fontWeight: 700, color: "#0f172a", margin: 0 }}>
-          Jeevora — Waitlist
+          Jeevora Care — Waitlist
         </h1>
         <p style={{ color: "#64748b", marginTop: 6, fontSize: 14 }}>
           {entries.length === 0

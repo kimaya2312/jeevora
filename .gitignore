@@ -44,3 +44,5 @@ yarn-error.log*
 /data/
 *.db
 *.sqlite
+
+.vercel

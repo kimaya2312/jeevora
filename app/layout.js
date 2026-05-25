@@ -6,8 +6,8 @@ import Providers from "@layouts/partials/Providers";
 import "../styles/style.scss";
 
 export const metadata = {
-  title: "Jeevora",
-  description: "Jeevora – Your trusted health platform",
+  title: "Jeevora Care",
+  description: "Jeevora Care – Your trusted health platform",
 };
 
 export default function RootLayout({ children }) {

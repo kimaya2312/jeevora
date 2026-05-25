@@ -86,7 +86,7 @@ export default function GPReportPreview() {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
             <div>
               <div style={{ color: "#fff", fontWeight: 700, fontSize: 14, fontFamily: "sans-serif", letterSpacing: 0.2 }}>
-                Jeevora
+                Jeevora Care
               </div>
               <div style={{ color: "#a7f3d0", fontSize: 9.5, fontFamily: "sans-serif", marginTop: 1 }}>
                 GP-Ready Patient Report
@@ -260,7 +260,7 @@ export default function GPReportPreview() {
             alignItems: "center",
           }}>
             <div style={{ fontSize: 7, color: "#9ca3af", fontFamily: "sans-serif", lineHeight: 1.5, maxWidth: 260 }}>
-              Jeevora does not diagnose or recommend treatment. This report is a patient context tool only and does not replace medical advice.
+              Jeevora Care does not diagnose or recommend treatment. This report is a patient context tool only and does not replace medical advice.
             </div>
             <div style={{
               background: G,

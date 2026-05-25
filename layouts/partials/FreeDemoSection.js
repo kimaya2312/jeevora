@@ -606,7 +606,7 @@ function ScreenGPReport() {
           </div>
           {/* Disclaimer */}
           <div style={{ fontSize:7, color:"#4b5563", lineHeight:1.5, marginBottom:8 }}>
-            Jeevora does not diagnose, recommend treatment, or replace medical advice. This report is a patient context tool only.
+            Jeevora Care does not diagnose, recommend treatment, or replace medical advice. This report is a patient context tool only.
           </div>
           {/* Download CTA */}
           <div style={{ background:G, borderRadius:20, padding:"9px", textAlign:"center", fontSize:10, fontWeight:700, color:"#fff" }}>Download PDF for GP</div>
@@ -863,13 +863,13 @@ const SCREENS_2 = [<ScreenMeds/>, <ScreenWearable/>];
 
 const FEATURES_1 = [
   { label:"Home dashboard",  heading:"Your unified daily view",     desc:"Wearable stats, today's entries, and a one-tap log button — all on one screen. Sleep quality and heart rate surface automatically from your connected device every morning." },
-  { label:"Symptom logging", heading:"SOCRATES, step by step",      desc:"Jeevora guides you through the clinical SOCRATES framework — onset, character, severity, and more. Chip selectors keep it quick; the voice fallback means you never have to type." },
-  { label:"Voice logging",   heading:"Just speak, we'll listen",    desc:"Tap record, describe your symptom naturally, and watch the fields populate in real time. Jeevora parses your words so nothing gets lost on the way to your GP report." },
+  { label:"Symptom logging", heading:"SOCRATES, step by step",      desc:"Jeevora Care guides you through the clinical SOCRATES framework — onset, character, severity, and more. Chip selectors keep it quick; the voice fallback means you never have to type." },
+  { label:"Voice logging",   heading:"Just speak, we'll listen",    desc:"Tap record, describe your symptom naturally, and watch the fields populate in real time. Jeevora Care parses your words so nothing gets lost on the way to your GP report." },
 ];
 
 const FEATURES_2 = [
   { label:"Medication tracking", heading:"Morning done. Evening pending.",         desc:"See your full medication schedule at a glance. Green ticks confirm what's taken; amber alerts flag anything missed. Forgotten doses are automatically noted in your next GP report." },
-  { label:"Wearable linkage",    heading:"Your wrist knows things your GP doesn't — yet.",   desc:"Sleep, heart rate, HRV, steps — pulled automatically from Apple Watch, Fitbit, Garmin, and more. Jeevora reads the patterns hiding in your data and surfaces them to your doctor before they become problems." },
+  { label:"Wearable linkage",    heading:"Your wrist knows things your GP doesn't — yet.",   desc:"Sleep, heart rate, HRV, steps — pulled automatically from Apple Watch, Fitbit, Garmin, and more. Jeevora Care reads the patterns hiding in your data and surfaces them to your doctor before they become problems." },
 ];
 
 const SCREENS_3 = [<ScreenFood/>, <ScreenWorkout/>];
@@ -877,12 +877,12 @@ const SCREENS_4 = [<ScreenGPReport/>, <ScreenAppointmentPrep/>];
 
 const FEATURES_3 = [
   { label:"Nutrition tracking", heading:"Log meals in seconds",    desc:"Tap to add what you ate — breakfast, lunch, dinner, snacks. Macros and calorie totals build automatically, and unusual dietary patterns surface in your GP report without you having to think about it." },
-  { label:"Exercise logging",   heading:"Move more, know more",    desc:"Log workouts manually or let your wearable sync them automatically. Jeevora connects exercise patterns to symptoms — so your GP sees exactly how your activity affects your health." },
+  { label:"Exercise logging",   heading:"Move more, know more",    desc:"Log workouts manually or let your wearable sync them automatically. Jeevora Care connects exercise patterns to symptoms — so your GP sees exactly how your activity affects your health." },
 ];
 
 const FEATURES_4 = [
-  { label:"GP-ready reports",    heading:"Your health story, told clearly",        desc:"Jeevora compiles every log into a structured, non-diagnostic summary — symptoms, medications, lifestyle patterns, missed doses — formatted for your GP to read in under two minutes." },
-  { label:"Appointment prep",    heading:"Never forget what is on your mind",          desc:"Note your questions and key concerns before you walk in. Jeevora surfaces the most important things to raise so nothing gets lost in a 10-minute appointment." },
+  { label:"GP-ready reports",    heading:"Your health story, told clearly",        desc:"Jeevora Care compiles every log into a structured, non-diagnostic summary — symptoms, medications, lifestyle patterns, missed doses — formatted for your GP to read in under two minutes." },
+  { label:"Appointment prep",    heading:"Never forget what is on your mind",          desc:"Note your questions and key concerns before you walk in. Jeevora Care surfaces the most important things to raise so nothing gets lost in a 10-minute appointment." },
 ];
 
 const SCREENS_5 = [<ScreenFoodLog/>, <ScreenPeriodLog/>];
@@ -1044,7 +1044,7 @@ export default function FreeDemoSection() {
       {/* ── Subsection 1: white bg · text LEFT · phone RIGHT ── */}
       <div style={{ background:"#fff", padding:"70px 0", borderTop:"1px solid #f1f5f9" }}>
         <div style={{ maxWidth:1140, margin:"0 auto", padding:"0 1.5rem" }}>
-          {sectionHeader("1","Log your health, your way","From a quick voice note to a structured SOCRATES symptom log — Jeevora works the way you think.")}
+          {sectionHeader("1","Log your health, your way","From a quick voice note to a structured SOCRATES symptom log — Jeevora Care works the way you think.")}
           <div className="jv-s1-row" style={{ display:"flex", alignItems:"stretch", gap:48, justifyContent:"center" }}>
             <div style={{ flex:"1 1 0", maxWidth:520 }}>
               <FeatureBlocks features={FEATURES_1} rowClass="jv-s1-row"/>
@@ -1070,7 +1070,7 @@ export default function FreeDemoSection() {
       {/* ── Subsection 3: white bg · text LEFT · phone RIGHT ── */}
       <div style={{ background:"#fff", padding:"70px 0", borderTop:"1px solid #f1f5f9" }}>
         <div style={{ maxWidth:1140, margin:"0 auto", padding:"0 1.5rem" }}>
-          {sectionHeader("3","Track how you fuel and move","Meals, macros, and workouts logged in seconds. Jeevora connects your lifestyle to your symptoms so your GP sees the complete picture.")}
+          {sectionHeader("3","Track how you fuel and move","Meals, macros, and workouts logged in seconds. Jeevora Care connects your lifestyle to your symptoms so your GP sees the complete picture.")}
           <div className="jv-s3-row" style={{ display:"flex", alignItems:"stretch", gap:48, justifyContent:"center" }}>
             <div style={{ flex:"1 1 0", maxWidth:520 }}>
               <FeatureBlocks features={FEATURES_3} rowClass="jv-s3-row"/>
@@ -1096,7 +1096,7 @@ export default function FreeDemoSection() {
       {/* ── Subsection 5: white bg · text LEFT · phone RIGHT ── */}
       <div style={{ background:"#fff", padding:"70px 0", borderTop:"1px solid #f1f5f9" }}>
         <div style={{ maxWidth:1140, margin:"0 auto", padding:"0 1.5rem" }}>
-          {sectionHeader("5","Track your cycle, understand your body","Log meals, symptoms, flow, and mood through your cycle. Jeevora connects the patterns so your GP has the full picture before you even walk in.")}
+          {sectionHeader("5","Track your cycle, understand your body","Log meals, symptoms, flow, and mood through your cycle. Jeevora Care connects the patterns so your GP has the full picture before you even walk in.")}
           <div className="jv-s5-row" style={{ display:"flex", alignItems:"stretch", gap:48, justifyContent:"center" }}>
             <div style={{ flex:"1 1 0", maxWidth:520 }}>
               <FeatureBlocks features={FEATURES_5} rowClass="jv-s5-row"/>

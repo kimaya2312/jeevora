@@ -37,9 +37,9 @@ const Product = ({ data }) => {
       <section id="features" className="section">
         <div className="container">
           <div className="mb-14 text-center">
-            <h1 className="h2 mb-3">Jeevora Product</h1>
+            <h1 className="h2 mb-3">Jeevora Care Product</h1>
             <p className="mx-auto max-w-xl text-lg">
-              Everything Jeevora offers — from daily tracking features to the
+              Everything Jeevora Care offers — from daily tracking features to the
               privacy-first platform it runs on.
             </p>
           </div>

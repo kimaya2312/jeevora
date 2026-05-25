@@ -11,7 +11,7 @@ const steps = [
     number: "02",
     icon: "📊",
     title: "Track patterns",
-    desc: "Jeevora connects your data over time, identifying trends in severity, frequency, and duration that a single appointment never could.",
+    desc: "Jeevora Care connects your data over time, identifying trends in severity, frequency, and duration that a single appointment never could.",
   },
   {
     number: "03",

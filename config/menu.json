@@ -27,7 +27,7 @@
     {
       "name": "About",
       "menu": [
-        { "text": "About Jeevora",     "url": "/about" },
+        { "text": "About Jeevora Care",     "url": "/about" },
         { "text": "What It Does",      "url": "/about#what-it-does" },
         { "text": "About the Founder", "url": "/about#founder" }
       ]

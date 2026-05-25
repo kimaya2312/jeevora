@@ -1,12 +1,12 @@
 {
   "site": {
-    "title": "Jeevora",
+    "title": "Jeevora Care",
     "base_url": "/",
     "favicon": "/images/logo-icon2.png",
     "logo": "/images/logo-icon2.png",
     "logo_width": "48",
     "logo_height": "32",
-    "logo_text": "Jeevora"
+    "logo_text": "Jeevora Care"
   },
   "settings": {
     "pagination": 4,
@@ -21,12 +21,12 @@
   "params": {
     "contact_form_action": "",
     "tag_manager_id": "",
-    "footer_content": "Jeevora is a privacy-first UK health app that helps patients track symptoms and prepare for GP appointments — without interfering with NHS systems.",
-    "copyright": "© 2026 Jeevora. All rights reserved."
+    "footer_content": "Jeevora Care is a privacy-first UK health app that helps patients track symptoms and prepare for GP appointments — without interfering with NHS systems.",
+    "copyright": "© 2026 Jeevora Care. All rights reserved."
   },
   "metadata": {
-    "meta_author": "Jeevora",
+    "meta_author": "Jeevora Care",
     "meta_image": "",
-    "meta_description": "Jeevora is a privacy-first UK health app that helps patients track symptoms, prepare for GP appointments, and build a complete picture of their health."
+    "meta_description": "Jeevora Care is a privacy-first UK health app that helps patients track symptoms, prepare for GP appointments, and build a complete picture of their health."
   }
 }

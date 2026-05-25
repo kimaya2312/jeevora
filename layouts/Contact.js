@@ -81,7 +81,7 @@ const Contact = () => {
             margin: "0 0 16px",
             lineHeight: 1.2,
           }}>
-            Your experience builds a better Jeevora — for everyone.
+            Your experience builds a better Jeevora Care — for everyone.
           </h1>
           <p style={{
             fontSize: 17,
@@ -90,7 +90,7 @@ const Contact = () => {
             maxWidth: 480,
             margin: "0 auto 16px",
           }}>
-            You know what it feels like to sit in a 10-minute appointment and forget half of what you meant to say. We're building Jeevora so that never happens again — and we need patients like you to get it right.
+            You know what it feels like to sit in a 10-minute appointment and forget half of what you meant to say. We're building Jeevora Care so that never happens again — and we need patients like you to get it right.
           </p>
           <p style={{
             fontSize: 17,
@@ -302,7 +302,7 @@ const Contact = () => {
                 marginTop: 14,
                 lineHeight: 1.5,
               }}>
-                No spam. We'll only reach out when Jeevora is ready for you.
+                No spam. We'll only reach out when Jeevora Care is ready for you.
               </p>
             </form>
           )}

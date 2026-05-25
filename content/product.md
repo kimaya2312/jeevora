@@ -1,7 +1,7 @@
 ---
 title: "Product"
 layout: "product"
-description: "Explore what Jeevora offers — features, platform, and early access."
+description: "Explore what Jeevora Care offers — features, platform, and early access."
 draft: false
 
 features:
