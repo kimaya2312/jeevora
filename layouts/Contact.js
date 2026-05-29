@@ -7,6 +7,7 @@ const G = "#1D9E75";
 const Contact = () => {
   const [name, setName]       = useState("");
   const [email, setEmail]     = useState("");
+  const [feature, setFeature] = useState("");
   const [note, setNote]       = useState("");
   const [errors, setErrors]   = useState({});
   const [status, setStatus]   = useState("idle"); // idle | loading | success | error
@@ -36,7 +37,7 @@ const Contact = () => {
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name.trim(), email: email.trim(), message: note.trim() }),
+        body: JSON.stringify({ name: name.trim(), email: email.trim(), message: note.trim(), feature: feature || null, source: typeof window !== "undefined" ? window.location.pathname : null }),
       });
       const data = await res.json();
       if (res.ok) {
@@ -44,6 +45,7 @@ const Contact = () => {
         setMessage(data.message || "You're on the waitlist!");
         setName("");
         setEmail("");
+        setFeature("");
         setNote("");
       } else {
         setStatus("error");
@@ -220,6 +222,57 @@ const Contact = () => {
                 {errors.email && (
                   <p style={{ fontSize: 12, color: "#dc2626", marginTop: 5, marginBottom: 20 }}>{errors.email}</p>
                 )}
+              </div>
+
+              {/* Feature of interest (optional) */}
+              <div style={{ marginBottom: 28 }}>
+                <label style={{
+                  display: "block",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: "#374151",
+                  marginBottom: 6,
+                }}>
+                  Feature of interest{" "}
+                  <span style={{ color: "#9ca3af", fontWeight: 400 }}>(optional)</span>
+                </label>
+                <div style={{ position: "relative" }}>
+                  <select
+                    value={feature}
+                    onChange={(e) => setFeature(e.target.value)}
+                    disabled={status === "loading"}
+                    style={{
+                      width: "100%",
+                      padding: "12px 14px",
+                      border: "1.5px solid #d1d5db",
+                      borderRadius: 8,
+                      fontSize: 15,
+                      color: feature ? "#111827" : "#9ca3af",
+                      background: status === "loading" ? "#f9fafb" : "#fff",
+                      outline: "none",
+                      boxSizing: "border-box",
+                      appearance: "none",
+                      cursor: "pointer",
+                      transition: "border-color 0.15s",
+                    }}
+                    onFocus={(e) => (e.target.style.borderColor = G)}
+                    onBlur={(e) => (e.target.style.borderColor = "#d1d5db")}
+                  >
+                    <option value="">Select a feature…</option>
+                    <option value="Symptom tracking">Symptom tracking</option>
+                    <option value="GP ready report">GP ready report</option>
+                    <option value="Lifestyle tracking">Lifestyle tracking</option>
+                    <option value="Privacy first">Privacy first</option>
+                  </select>
+                  {/* Custom chevron */}
+                  <svg
+                    width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                    style={{ position: "absolute", right: 14, top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }}
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
               </div>
 
               {/* Note (optional) */}

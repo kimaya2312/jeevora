@@ -9,18 +9,31 @@
       "url": "/about"
     },
     {
-      "name": "Product",
-      "url": "/product"
+      "name": "Features",
+      "hasChildren": true,
+      "children": [
+        { "name": "GP-Ready Report",    "url": "/gp-report" },
+        { "name": "Symptom Tracking",   "url": "/symptom-tracking" },
+        { "name": "Lifestyle Tracking", "url": "/lifestyle-tracking" },
+        { "name": "Privacy First",      "url": "/privacy-first" }
+      ]
     }
   ],
   "footer": [
     {
-      "name": "Home",
+      "name": "Features",
       "menu": [
-        { "text": "Features",       "url": "/#features" },
+        { "text": "GP-Ready Report",    "url": "/gp-report" },
+        { "text": "Symptom Tracking",   "url": "/symptom-tracking" },
+        { "text": "Lifestyle Tracking", "url": "/lifestyle-tracking" },
+        { "text": "Privacy First",      "url": "/privacy-first" }
+      ]
+    },
+    {
+      "name": "Quick Links",
+      "menu": [
+        { "text": "Home",           "url": "/" },
         { "text": "How It Works",   "url": "/#how-it-works" },
-        { "text": "GP-Ready Reports","url": "/#gp-ready" },
-        { "text": "Privacy First",  "url": "/#privacy" },
         { "text": "Join Waitlist",  "url": "/contact" }
       ]
     },

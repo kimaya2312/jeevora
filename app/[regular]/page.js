@@ -4,7 +4,11 @@ import Contact from "@layouts/Contact";
 import Product from "@layouts/Product";
 import Default from "@layouts/Default";
 import Faq from "@layouts/Faq";
+import GpReport from "@layouts/GpReport";
+import LifestyleTracking from "@layouts/LifestyleTracking";
 import Pricing from "@layouts/Pricing";
+import PrivacyFirst from "@layouts/PrivacyFirst";
+import SymptomTracking from "@layouts/SymptomTracking";
 import SeoMeta from "@layouts/SeoMeta";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
 
@@ -38,6 +42,14 @@ const RegularPages = async ({ params }) => {
         <Pricing data={regularPageData} />
       ) : layout === "faq" ? (
         <Faq data={regularPageData} />
+      ) : layout === "gp-report" ? (
+        <GpReport data={regularPageData} />
+      ) : layout === "symptom-tracking" ? (
+        <SymptomTracking data={regularPageData} />
+      ) : layout === "lifestyle-tracking" ? (
+        <LifestyleTracking data={regularPageData} />
+      ) : layout === "privacy-first" ? (
+        <PrivacyFirst data={regularPageData} />
       ) : (
         <Default data={regularPageData} />
       )}

@@ -1,12 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function WaitlistForm() {
-  const [form, setForm]       = useState({ name: "", email: "" });
+const FEATURE_OPTIONS = [
+  "Symptom tracking",
+  "GP ready report",
+  "Lifestyle tracking",
+  "Privacy first",
+];
+
+export default function WaitlistForm({ feature }) {
+  const showFeatureFields = feature !== undefined;
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    feature: feature || "",
+    message: "",
+  });
   const [errors, setErrors]   = useState({});
   const [status, setStatus]   = useState(null); // null | "loading" | "success" | "error"
   const [message, setMessage] = useState("");
+
+  // Sync feature dropdown when the active tab changes
+  useEffect(() => {
+    if (showFeatureFields) {
+      setForm((prev) => ({ ...prev, feature: feature || "" }));
+    }
+  }, [feature, showFeatureFields]);
 
   const validate = () => {
     const errs = {};
@@ -22,7 +43,6 @@ export default function WaitlistForm() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
-    // Clear the error for this field as the user types
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: undefined }));
   };
 
@@ -35,17 +55,25 @@ export default function WaitlistForm() {
     setMessage("");
 
     try {
+      const body = {
+        name: form.name.trim(),
+        email: form.email.trim(),
+        source: typeof window !== "undefined" ? window.location.pathname : null,
+        ...(showFeatureFields && form.feature && { feature: form.feature }),
+        ...(showFeatureFields && form.message.trim() && { message: form.message.trim() }),
+      };
+
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: form.name.trim(), email: form.email.trim() }),
+        body: JSON.stringify(body),
       });
       const data = await res.json();
 
       if (res.ok) {
         setStatus("success");
         setMessage(data.message || "You're on the waitlist!");
-        setForm({ name: "", email: "" });
+        setForm({ name: "", email: "", feature: feature || "", message: "" });
         setErrors({});
       } else {
         setStatus("error");
@@ -118,6 +146,48 @@ export default function WaitlistForm() {
           )}
         </div>
 
+        {/* Feature dropdown + feedback — only when a feature context is provided */}
+        {showFeatureFields && (
+          <>
+            {/* Feature of interest */}
+            <div>
+              <label htmlFor="wf-feature" style={labelStyle}>
+                Feature of interest
+              </label>
+              <select
+                id="wf-feature"
+                name="feature"
+                value={form.feature}
+                onChange={handleChange}
+                disabled={disabled}
+                className={`${inputBase} border-border focus:border-primary bg-transparent cursor-pointer`}
+              >
+                {FEATURE_OPTIONS.map((opt) => (
+                  <option key={opt} value={opt}>{opt}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Optional feedback */}
+            <div>
+              <label htmlFor="wf-message" style={labelStyle}>
+                What would make this feature most useful for you?{" "}
+                <span style={{ fontWeight: 400, opacity: 0.6 }}>(optional)</span>
+              </label>
+              <textarea
+                id="wf-message"
+                name="message"
+                placeholder="Share any thoughts, use cases, or things you'd love to see…"
+                value={form.message}
+                onChange={handleChange}
+                disabled={disabled}
+                rows={3}
+                className={`${inputBase} border-border focus:border-primary resize-none`}
+              />
+            </div>
+          </>
+        )}
+
         {/* API-level error */}
         {status === "error" && message && (
           <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
@@ -134,7 +204,7 @@ export default function WaitlistForm() {
           {status === "loading"
             ? "Joining…"
             : status === "success"
-            ? "✓ You're on the list!"
+            ? "✓ Thank you for joining us!"
             : "Join Waitlist"}
         </button>
       </div>

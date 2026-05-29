@@ -20,7 +20,7 @@
 }
 
 #nav-menu {
-  @apply w-full overflow-hidden md:max-h-full md:w-auto;
+  @apply w-full overflow-hidden md:max-h-full md:w-auto md:overflow-visible;
 }
 
 .nav-item {
@@ -36,5 +36,23 @@
 
   &-active {
     @apply text-primary;
+  }
+}
+
+// Dropdown
+.nav-dropdown {
+  @apply relative;
+
+  &-list {
+    @apply z-50 min-w-[200px] rounded-lg border border-border bg-white py-2 shadow-lg
+           md:absolute md:left-0 md:top-full;
+  }
+
+  &-item {
+    @apply block;
+  }
+
+  &-link {
+    @apply block px-5 py-2.5 font-primary text-sm font-bold text-dark transition hover:bg-theme-light hover:text-primary;
   }
 }

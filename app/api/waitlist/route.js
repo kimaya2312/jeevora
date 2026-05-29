@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const { name, email, message } = await request.json();
+    const { name, email, message, feature, source } = await request.json();
 
     // Basic validation
     if (!name || !name.trim()) {
@@ -29,11 +29,13 @@ export async function POST(request) {
     await addToWaitlist(
       name.trim(),
       email.trim().toLowerCase(),
-      message ? message.trim() : null
+      message ? message.trim() : null,
+      feature ? feature.trim() : null,
+      source ? source.trim() : null
     );
 
     return NextResponse.json(
-      { message: "You're on the waitlist! We'll be in touch soon." },
+      { message: "Thank you for helping us get this right. We'll reach out soon." },
       { status: 201 }
     );
   } catch (err) {
